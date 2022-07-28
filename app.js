@@ -1,37 +1,7 @@
-const textWeb = document.querySelector('.fancy2');
-const strText1 = textWeb.textContent;
-const splittext1 = strText1.split("");
-textWeb.textContent = " ";
-
-for(let j = 0; j < splittext1.length; j++) {
-  textWeb.innerHTML += "<i id='anim1'>" + splittext1[j] + "</i>";
-}
-
-let char1 = 0;
-let timer1 = setInterval(onTick1, 50);
-
-function onTick1() {
-  
-  const span = textWeb.querySelectorAll('#anim1') [char1];
-  span.classList.add('faded2');
-
-  char1++
-
-  if(char1 === splittext1.length) {
-    complete1();
-    return;
-  }
-}
-
-function complete1() {
-  clearInterval(timer1);
-  timer1 = null;
-}
-
-
 //Name animation code
 //Name animation code
 //Name animation code
+
 
 
 const textf = document.querySelector('.fancy');
@@ -86,9 +56,8 @@ function complete() {
 //Code for getting data from weather api to my website
 
 window.addEventListener("load", () => {
-  let long = 24.38;;
-  let lat = 91.42;
-
+  let long = 24.275791;;
+  let lat = 91.466077;
   let temp = document.querySelector('.widh2');
   let wind = document.querySelector('.widh4');
   let icon1 = document.getElementsByClassName('icon');
@@ -149,7 +118,7 @@ function plusSlides1(n) {
 
   slideIndex1 = slideIndex1 + n;
 
-  if (slideIndex1 >= slides1.length) {
+  if (slideIndex1 > slides1.length) {
     slideIndex1 = 1;
   } else if (slideIndex1 < 1) {
     slideIndex1 = slides1.length;
@@ -163,7 +132,7 @@ function plusSlides2(n) {
 
   slideIndex2 = slideIndex2 + n;
 
-  if (slideIndex2 >= slides2.length) {
+  if (slideIndex2 > slides2.length) {
     slideIndex2 = 1;
   } else if (slideIndex2 < 1) {
     slideIndex2 = slides2.length;
@@ -177,7 +146,7 @@ function plusSlides3(n) {
 
   slideIndex3 = slideIndex3 + n;
 
-  if (slideIndex3 >= slides3.length) {
+  if (slideIndex3 > slides3.length) {
     slideIndex3 = 1;
   } else if (slideIndex3 < 1) {
     slideIndex3 = slides3.length;

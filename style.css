@@ -36,9 +36,8 @@ header::before {
   width: 75%;
   height: 100%;
   background-color: #835946;
-  right: -20%;
+  right: -30%;
   transform: skew(-20deg);
-  z-index: -1;
 }
 
 header .header-bx {
@@ -56,22 +55,57 @@ header .header-bx nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 
 header .header-bx nav .logo {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   width: 440px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   color: #835946;
 }
 
 header .header-bx nav .logo .fancy2 {
-  margin-left: 2px;
+  margin-left: 5px;
   color: #ffaf8b;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
+  z-index: -1;
 }
+
+header .header-bx nav .logo span {
+  position: relative;
+  z-index: -1;
+
+}
+
+header .header-bx nav .logo span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-left: 2px solid #ffaf8b;
+  background: #fff;
+  animation: typing 4s steps(30) infinite;
+  z-index: 1;
+  
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+        margin: 0, -35px, 0, 25px;
+
+  }
+
+  50% {
+    left: 100%;
+    margin: 0, -35px, 0, 25px;
+
+  }
+}
+
 
 
 header .header-bx nav .logo .spannav {
@@ -336,7 +370,7 @@ header .header-bx .content .weather .widget-03 .facon{
 }
 
 header .header-bx .content .weather .widget-03 img{
-  animation: fan 2s linear infinite;
+  animation: fan 4s linear infinite;
 }
 
 @keyframes fan {
@@ -495,33 +529,42 @@ body .Portfolio .vertical-line {
 
 
 body .Portfolio .content-01 {
-  width: 48%;
+  width: 38%;
   height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   /* border: 1px solid #000; */
 }
 
 body .Portfolio .content-01 .content-01-h1 {
   color: #835946;
-  margin-top: 20px;
-  margin-left: 140px;
+  margin-top: 0px;
+  margin-left: 90px;
   font-size: 35px;
 }
 
 body .Portfolio .content-01 .content-01-h2{
   color: #835946;
-  margin-top: 10px;
-  margin-left: 140px;
+  margin-top: 0px;
+  margin-left: 90px;
   font-size: 25px;
+}
+
+body .Portfolio .content-01 .content-01-h3{
+  color: #ffaf8b;
+  margin-top: 0px;
+  margin-left: 90px;
+  font-size: 20px;
 }
 
 body .Portfolio .content-01 .content-01-p {
   color: #ffaf8b;
-  width: 75%;
-  margin-top: 15px;
-  margin-left: 140px;
+  width: 80%;
+  text-align: justify;
+  margin-top: 5px;
+  margin-left: 90px;
   font-size: 20px;
 }
 
@@ -549,7 +592,7 @@ body .Portfolio .content-01 .content-01-p {
 
 body .Portfolio .slideshow-container-01 {
   position: relative;
-  width: 48%;
+  width: 58%;
   height: 700px;
   /* border: 1px solid #000; */
 }
@@ -679,7 +722,7 @@ body .Portfolio .Gap {
 
 body .Portfolio .slideshow-container-02 {
   position: relative;
-  width: 48%;
+  width: 58%;
   height: 700px;
   /* border: 1px solid #000; */
 }
@@ -800,40 +843,45 @@ body .Portfolio .slideshow-container-02 .active, .dot2:hover {
 /*2nd Content Starts Here*/
 
 
-
-
 body .Portfolio .content-02 {
-  width: 48%;
+  width: 38%;
   height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   /* border: 1px solid #000; */
 }
 
 body .Portfolio .content-02 .content-02-h1 {
   color: #835946;
-  margin-top: 20px;
-  margin-left: 140px;
+  margin-top: 0px;
+  margin-left: 90px;
   font-size: 35px;
 }
 
 body .Portfolio .content-02 .content-02-h2{
   color: #835946;
-  margin-top: 10px;
-  margin-left: 140px;
+  margin-top: 0px;
+  margin-left: 90px;
   font-size: 25px;
+}
+
+body .Portfolio .content-02 .content-02-h3{
+  color: #ffaf8b;
+  margin-top: 0px;
+  margin-left: 90px;
+  font-size: 20px;
 }
 
 body .Portfolio .content-02 .content-02-p {
   color: #ffaf8b;
-  width: 75%;
-  margin-top: 15px;
-  margin-left: 140px;
+  width: 80%;
+  text-align: justify;
+  margin-top: 5px;
+  margin-left: 90px;
   font-size: 20px;
 }
-
-
 /*2nd Content Ends Here*/
 /*2nd Content Ends Here*/
 /*2nd Content Ends Here*/
@@ -847,17 +895,55 @@ body .Portfolio .content-02 .content-02-p {
 /*3rd Content Starts Here*/
 /*3rd Content Starts Here*/
 /*3rd Content Starts Here*/
-
-
 
 
 body .Portfolio .content-03 {
+  width: 38%;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* border: 1px solid #000; */
+}
+
+body .Portfolio .content-03 .content-03-h1 {
+  color: #835946;
+  margin-top: 0px;
+  margin-left: 90px;
+  font-size: 35px;
+}
+
+body .Portfolio .content-03 .content-03-h2{
+  color: #835946;
+  margin-top: 0px;
+  margin-left: 90px;
+  font-size: 25px;
+}
+
+body .Portfolio .content-03 .content-03-h3{
+  color: #ffaf8b;
+  margin-top: 0px;
+  margin-left: 90px;
+  font-size: 20px;
+}
+
+body .Portfolio .content-03 .content-03-p {
+  color: #ffaf8b;
+  width: 80%;
+  text-align: justify;
+  margin-top: 5px;
+  margin-left: 90px;
+  font-size: 20px;
+}
+
+/* body .Portfolio .content-03 {
   width: 48%;
   height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border: 1px solid #000; */
+  border: 1px solid #000;
 }
 
 body .Portfolio .content-03 .content-03-h1 {
@@ -880,7 +966,7 @@ body .Portfolio .content-03 .content-03-p {
   margin-top: 15px;
   margin-left: 140px;
   font-size: 20px;
-}
+} */
 
 
 /*3rd Content Ends Here*/
@@ -901,7 +987,7 @@ body .Portfolio .content-03 .content-03-p {
 
 body .Portfolio .slideshow-container-03 {
   position: relative;
-  width: 48%;
+  width: 58%;
   height: 700px;
   /* border: 1px solid #000; */
 }
@@ -1010,10 +1096,436 @@ body .Portfolio .slideshow-container-03 .active, .dot3:hover {
 /*Image Slider 03 CSS End*/
 
 
+/*Experience codes start here*/
+/*Experience codes start here*/
+/*Experience codes start here*/
+/*Experience codes start here*/
+
+
 body .Experience {
+  
+  /* flex-basis: 33.33333333%; */
+  justify-content: space-between;
   margin: auto;
   width: 65%;
-  height: 1200px;
-  border: 1px solid #000;
+  height: 1890px;
+  /* border: 1px solid #000; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
+
+/*1st company detail codes start here*/
+/*1st company detail codes start here*/
+/*1st company detail codes start here*/
+
+
+body .Experience .empty-01 {
+  align-self: flex-start;
+  width: 45%;
+  height: 540px;
+  align-items: center;
+  /* border: 1px solid #000; */
+}
+
+body .Experience .center-information {
+  align-self: flex-start;
+  justify-self: center;
+  width: 5%;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid #000; */
+  font-weight: 700;
+}
+
+body .Experience .center-information .vertical-line{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 540px;
+  border: 1px solid #ffaf8b;
+}
+
+body .Experience .company-01{
+  padding-left: 60px;
+  width: 45%;
+  align-self: flex-start;
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 540px;
+  /* border: 1px solid #000; */
+}
+
+body .Experience .company-01 .ch1 {
+  color: #835946;
+}
+
+body .Experience .company-01 .ch2 {
+  margin-top: 2%;
+  color: #835946;
+}
+
+body .Experience .company-01 .ch3 {
+  margin-top: 2%;
+  color: #ffaf8b;
+}
+
+body .Experience .company-01 .cp {
+  margin-top: 2%;
+  width: 435px;
+  text-align: justify;
+  color: #835946;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/*1st company detail codes ends here*/
+/*1st company detail codes ends here*/
+/*1st company detail codes ends here*/
+
+
+/*2nd company detail codes starts here*/
+/*2nd company detail codes starts here*/
+/*2nd company detail codes starts here*/
+
+
+
+body .Experience .empty-02 {
+  align-self: flex-start;
+  width: 45%;
+  height: 900px;
+  align-items: center;
+  /* border: 1px solid #000; */
+}
+
+body .Experience .center-information-02 {
+  align-self: flex-start;
+  justify-self: center;
+  width: 5%;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid #000; */
+  font-weight: 700;
+}
+
+body .Experience .center-information-02 .vertical-line-02{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 700px;
+  border: 1px solid #ffaf8b;
+}
+
+body .Experience .company-02{
+  padding-left: 60px;
+  width: 45%;
+  align-self: flex-start;
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 900px;
+  /* border: 1px solid #000; */
+}
+
+body .Experience .company-02 .ch1-02 {
+  color: #835946;
+}
+
+body .Experience .company-02 .ch2-02 {
+  margin-top: 2%;
+  color: #835946;
+}
+
+body .Experience .company-02 .ch3-02 {
+  margin-top: 2%;
+  color: #ffaf8b;
+}
+
+body .Experience .company-02 .cp-02 {
+  margin-top: 2%;
+  width: 435px;
+  text-align: justify;
+  color: #835946;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/*2nd company detail codes ends here*/
+/*2nd company detail codes ends here*/
+/*2nd company detail codes ends here*/
+
+
+
+/*3rd company detail codes starts here*/
+/*3rd company detail codes starts here*/
+/*3rd company detail codes starts here*/
+
+
+
+body .Experience .empty-03 {
+  align-self: flex-start;
+  width: 45%;
+  height: 450px;
+  align-items: center;
+  /* border: 1px solid #000; */
+}
+
+body .Experience .center-information-03 {
+  align-self: flex-start;
+  justify-self: center;
+  width: 5%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid #000; */
+  font-weight: 700;
+}
+
+body .Experience .center-information-03 .vertical-line-03{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 200px;
+  border: 1px solid #ffaf8b;
+}
+
+body .Experience .company-03{
+  padding-left: 60px;
+  width: 45%;
+  align-self: flex-start;
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 450px;
+  /* border: 1px solid #000; */
+}
+
+body .Experience .company-03 .ch1-03 {
+  color: #835946;
+}
+
+body .Experience .company-03 .ch2-03 {
+  margin-top: 2%;
+  color: #835946;
+}
+
+body .Experience .company-03 .ch3-03 {
+  margin-top: 2%;
+  color: #ffaf8b;
+}
+
+body .Experience .company-03 .cp-03 {
+  margin-top: 2%;
+  width: 435px;
+  text-align: justify;
+  color: #835946;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/*3rd company detail codes ends here*/
+/*3rd company detail codes ends here*/
+/*3rd company detail codes ends here*/
+
+
+/*Contact codes start here*/
+/*Contact codes start here*/
+/*Contact codes start here*/
+
+
+
+body .contact {
+  width: 65%;
+  height: 450px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  /* border: 1px solid #000; */
+}
+
+body .contact .map {
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid #000; */
+}
+
+body .contact .form {
+  width: 50%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3d7cb;
+  /* border: 1px solid #000; */
+}
+
+body .contact .form .child-01, .child-02, .child-03, .child-04 {
+  margin-bottom: 10px;
+}
+
+body .contact .form .child-05 {
+  width: 70%;
+  margin-left: 0;
+}
+
+
+
+body .contact .form #fname {
+  opacity: 80%;
+  width: 350px;
+  height: 30px;
+  border: none;
+
+}
+
+body .contact .form #email {
+  opacity: 80%;
+  width: 350px;
+  height: 30px;
+  border: none;
+}
+
+body .contact .form #mobile {
+  opacity: 80%;
+  width: 350px;
+  height: 30px;
+  border: none;
+}
+
+body .contact .form #message {
+  opacity: 80%;
+  width: 350px;
+  height: 100px;
+  border: none;
+}
+
+body .contact .form #button-submit {
+
+  margin-top: 20px;
+  background-color: #835946;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: #fff;
+  border: none;
+  align-self: flex-start;
+  width: 150px;
+  height: 35px;
+}
+
+input {
+  padding-left: 10px;
+  font-size: 17px;
+  text-align: left;
+  
+}
+
+textarea {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 6px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  
+}
+
+#bottomlinks {
+  width: 65%;
+  height: 250px;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 50px;
+  justify-content: center;
+  /* border: 1px solid #000; */
+}
+
+
+/*#bottomlinks ul {
+  list-style-type: none;
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #835946;
+  border: 1px solid #000;
+
+}
+
+#bottomlinks ul li {
+  justify-self: center;
+  border-left: 1px #000;
+
+} */
+
+#bottomlinks ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#bottomlinks ul li {
+  position: relative;
+  margin-left: 25px;
+  padding: 4px, 0px;
+}
+
+#bottomlinks ul li a {
+  text-decoration: none;
+  color: #835946;
+  font-size: 18px;
+  transition: 0.3s linear;
+}
+
+#bottomlinks ul li a:hover {
+  color: #ffaf8b;
+}
+
+#bottomlinks ul li .spannav1 {
+  position: absolute;
+  bottom: 0;
+  background: #ffaf8b;
+  width: 0%;
+  height: 3px;
+  border-radius: 20px;
+  transition: 0.3s linear;
+}
+
+#bottomlinks ul li:hover .spannav1:nth-child(1) {
+  width: 50%;
+}
+
+#bottomlinks ul li .spannav1:nth-child(2) {
+  width: 0%;
+  left: 60%;
+}
+
+#bottomlinks ul li:hover .spannav1:nth-child(2) {
+  width: 15%;
+}
+
+#bottomlinks ul li .spannav1:nth-child(3) {
+  width: 0%;
+  left: 85%;
+}
+
+#bottomlinks ul li:hover .spannav1:nth-child(3) {
+  width: 15%;
+}
