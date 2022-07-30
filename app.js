@@ -1,7 +1,44 @@
-//Name animation code
-//Name animation code
-//Name animation code
+//Navslider code starts here
+//Navslider code starts here
+//Navslider code starts here
 
+
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav-links");
+
+  burger.addEventListener('click', () => {
+    
+      nav.classList.toggle("opened");
+  })
+
+
+  window.onscroll = function () {
+    windowScroll();
+  }
+
+ 
+    
+  function windowScroll () {
+    if(nav.classList.contains("opened")) {
+      nav.classList.toggle("opened");
+    }
+  }
+
+
+
+
+
+//Navslider code ends here
+//Navslider code ends here
+//Navslider code ends here
+//Navslider code ends here
+
+
+
+
+//Name animation code
+//Name animation code
+//Name animation code
 
 
 const textf = document.querySelector('.fancy');
