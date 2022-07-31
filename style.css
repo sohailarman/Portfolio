@@ -368,6 +368,7 @@ header .header-bx .content .weather .widget-03 {
 header .header-bx .content .weather .widget-03 .facon{
   width: 40px;
   height: 40px;
+  z-index: -1;
   
 }
 
